@@ -8,6 +8,7 @@ class RandomChar {
   static #randomNumber() {
     return '' + Math.round(Math.random() * 9);
   }
+  static #randomChar() {}
 };
 
 export default RandomChar;
