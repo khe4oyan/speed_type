@@ -6,4 +6,5 @@ Visit Link: https://khe4oyan.github.io/speed_type/
 
 ## Version Notes
 
-- (v.0.0.1): has only numbers
+- ### v.0.0.1
+  - has only numbers

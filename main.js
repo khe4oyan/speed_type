@@ -1,3 +1,5 @@
+import RandomChar from './js/RandomChar.js';
+
 const chars = [];
 const currentCharIndex = 10;
 const statuses = {
@@ -27,7 +29,7 @@ function leftShift(chars) {
   for (let i = 0; i < chars.length - 1; ++i) {
     chars[i] = chars[i + 1];
   }
-  chars[chars.length - 1] = {value: createValue(), status: statuses.def};
+  chars[chars.length - 1] = {value: RandomChar.newRandomChar, status: statuses.def};
 }
 
 function randomFill(chars) {
@@ -35,7 +37,7 @@ function randomFill(chars) {
     chars[i] = {value: null, status: statuses.def};
   }
   for (let i = 10; i < 21; ++i) {
-    chars[i] = {value: createValue(), status: statuses.def}
+    chars[i] = {value: RandomChar.newRandomChar, status: statuses.def}
   }
 }
 
@@ -82,8 +84,4 @@ function showCharsInDOM(chars) {
     nextChars.appendChild(char);
   }
   charsBox.appendChild(nextChars);
-}
-
-function createValue() {
-  return '' + Math.round(Math.random() * 9);
 }

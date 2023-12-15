@@ -8,6 +8,10 @@ body {
   min-height: 100dvh;
 }
 
+.app {
+  max-width: 900px;
+  margin: auto;
+}
 .charsBox {
   max-width: 500px;
   display: grid;
