@@ -1,6 +1,6 @@
 class RandomChar {
   constructor() { throw new Error('not have instance');}
-  
+
   static get newRandomChar() {
     return RandomChar.#randomNumber();
   }
