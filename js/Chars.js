@@ -2,7 +2,6 @@ import RandomChar from "./RandomChar.js";
 import DOM from './dom.js';
 import Char from "./Char.js";
 
-
 class Chars {
   static #chars = [];
   static #currentCharIndex = 10;
@@ -17,6 +16,10 @@ class Chars {
   }
 
   static init() {
+    // reset values
+    Chars.#chars = [];
+
+    // init values
     Chars.#randomFill();
     Chars.showCharsInDOM();
   }

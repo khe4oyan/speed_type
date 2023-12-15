@@ -7,13 +7,11 @@
 body {
   min-height: 100dvh;
 }
-
 .app {
-  max-width: 900px;
+  max-width: 700px;
   margin: auto;
 }
 .charsBox {
-  max-width: 500px;
   display: grid;
   grid-template-columns: 10fr 1fr 10fr;
   grid-gap: 10px;
@@ -43,4 +41,30 @@ body {
 }
 .charDone {
   background: rgb(202, 252, 173);
+}
+.statistics {
+  --space: 4px;
+  margin-top: var(--space);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content;
+  grid-gap: var(--space);
+}
+.value {
+  min-width: 120px;
+  width: fit-content;
+  padding: 10px;
+  font-weight: bold;
+}
+.valueDone {
+  --color: rgb(73, 153, 22);
+  background: rgb(219, 246, 202);
+  color: var(--color);
+  border: 2px solid var(--color);
+}
+.valueFail {
+  --color: rgb(153, 22, 22);
+  background: rgb(246, 202, 202);
+  color: var(--color);
+  border: 2px solid var(--color);
 }

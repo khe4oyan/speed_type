@@ -1,6 +1,9 @@
 import Chars from './js/Chars.js';
+import Statistic from './js/Statistic.js';
 
 Chars.init();
+Statistic.init();
+Statistic.showValuesInDom();
 
 document.addEventListener('keydown', (e) => {
   const pressedKey = e.key;
@@ -12,8 +15,10 @@ document.addEventListener('keydown', (e) => {
 
   if (pressedKey == chars[currentCharIndex].value) {
     chars[currentCharIndex].statusDone();
+    Statistic.incrementDone();
   } else {
     chars[currentCharIndex].statusFail();
+    Statistic.incrementFail();
   }
   
   Chars.nextChar();
